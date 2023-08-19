@@ -1,0 +1,265 @@
+:root {
+    --bg-color-area-verde: #3ebd60e0;
+    --color-borde-area-verde: beige;
+  }
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+}
+
+#section-one {
+    display: none;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-figura {
+    position: relative;
+    width: 500px;
+    height: 394px;
+    background: cornflowerblue;
+}
+
+.area-verde {
+    position: absolute;
+    width: 150px;
+    height: 100px;
+    background: var(--bg-color-area-verde);
+}
+
+.cuadro-izq-up {
+    left: 0;
+    top: 0;
+    border-radius: 0 0 16px 0;
+    border-right: 4px solid var(--color-borde-area-verde);
+    border-bottom: 4px solid var(--color-borde-area-verde);
+
+}
+
+.cuadro-der-up {
+    right: 0;
+    top: 0;
+    border-radius: 0 0 0 16px;
+    border-left: 4px solid var(--color-borde-area-verde);
+    border-bottom: 4px solid var(--color-borde-area-verde);
+}
+
+.cuadro-izq-down {
+    left: 0;
+    bottom: 0;
+    border-radius: 0 16px 0 0;
+    border-right: 4px solid var(--color-borde-area-verde);
+    border-top: 4px solid var(--color-borde-area-verde);
+}
+
+.cuadro-der-down {
+    right: 0;
+    bottom: 0;
+    border-radius: 16px 0 0 0;
+    border-left: 4px solid var(--color-borde-area-verde);
+    border-top: 4px solid var(--color-borde-area-verde);
+}
+
+.principal_av {
+    position: absolute;
+    left: 150px;
+    height: 394px;
+    width: 200px;
+    background: rgb(60, 123, 240);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.linea-vertical {
+    background: white;
+    width: 4px;
+    height: 100px;
+}
+
+.secondary_av {
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    height: 200px;
+    background: none;  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.linea-horizontal {
+    background: white;
+    width: 150px;
+    height: 4px;
+}
+
+.car {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    z-index: 4;
+    border-radius: 50%;
+}
+
+.car1 {
+    background: silver;
+    bottom: 140px;
+    left: 120px;
+}
+
+.car2 {
+    background: white;
+    left: 190px;
+    top: -20px;
+    animation: transitar-norte-sur 2.5s linear 3s 1 forwards;
+}
+
+.car3 {
+    background: orange;
+    bottom: 0;
+    right: 190px;
+    animation: transitar-sur-norte 2s linear 1 forwards;
+}
+
+.car4 {
+    background: black;
+    top: 140px;
+    right: 120px;
+    animation: transitar-oeste-este 2s linear 1.5s 1 forwards;  
+}
+
+@keyframes transitar-norte-sur  {
+    0% {
+        top: -20px;
+    }
+    100% {
+        top: 370px;
+    }
+}
+
+
+@keyframes transitar-sur-norte  {
+    0% {
+        bottom: 0px;
+    }
+    100% {
+        bottom: 370px;
+    }
+}
+
+@keyframes transitar-oeste-este  {
+    0% {
+        right: 120px;
+    }
+    100% {
+        right: 480px;
+    }
+}
+
+.primary-button {
+    width: 80px;
+    height: 80px;
+    border: none;
+    border-radius: 50%;
+    background: radial-gradient(transparent, #001e80);
+    margin-top: 30px;
+}
+
+.primary-button:hover {
+    transform: scale(95%);
+    border: 3px solid #001e80;
+}
+
+.secondary-button {
+    width: 80px;
+    height: 80px;
+    border: none;
+    border-radius: 50%;
+    background: radial-gradient(transparent, #8f8f8f);
+    margin-top: 30px;
+}
+
+.secondary-button:hover {
+    transform: scale(95%);
+    border: 3px solid #808080;
+}
+
+/* Section two */
+
+#section-two {
+    /* display: none; */
+}
+
+
+.s2-car1 {
+    background: silver;
+    bottom: 140px;
+    left: 0px;
+    animation: transitar-este-oeste 3s linear 1.5s 1 forwards;  
+}
+
+.s2-car3 {
+    background: orange;
+    bottom: 0;
+    right: 190px;
+    animation: transitar-sur-norte 2s linear 1 forwards;
+}
+
+.s2-car4 {
+    background: black;
+    top: 140px;
+    right: 0px;
+    animation: transitar-oeste-este 3s ease-in-out 1 forwards;
+}
+
+@keyframes transitar-oeste-este  {
+    0% {
+        right: 0px;
+    }
+    30% {
+        right: 130px;
+    }
+    60% {
+        right: 130px;
+    }
+    100% {
+        right: 480px;
+    }
+}
+
+@keyframes transitar-sur-norte  {
+    0% {
+        bottom: 0px;
+    }
+    100% {
+        bottom: 370px;
+    }
+}
+
+@keyframes transitar-este-oeste  {
+    0% {
+        left: 0px;
+    }
+    30% {
+        left: 130px;
+    }
+    60% {
+        left: 130px;
+    }
+    100% {
+        left: 480px;
+    }
+}
