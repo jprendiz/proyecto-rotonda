@@ -13,10 +13,6 @@ h1 {
     text-align: center;
 }
 
-#section-one {
-    display: none;
-}
-
 .container {
     width: 100%;
     height: 100vh;
@@ -24,6 +20,10 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.container h2 {
+    margin-bottom: 50px;
 }
 
 .container-figura {
@@ -104,6 +104,27 @@ h1 {
     background: white;
     width: 150px;
     height: 4px;
+}
+
+.rotonda-anillo-1 {
+    position: absolute;
+    height: 290px;
+    width: 290px;
+    left: 105px;
+    top: 51px;
+    border-radius: 50%;
+    background: linear-gradient(rgb(60, 123, 240), #77a1f0bb);
+    z-index: 2;
+}
+.rotonda-centro {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    left: 175px;
+    top: 120px;
+    border-radius: 50%;
+    background: black;
+    z-index: 3;
 }
 
 .car {
@@ -200,32 +221,31 @@ h1 {
 /* Section two */
 
 #section-two {
-    /* display: none; */
+    display: none;
 }
-
 
 .s2-car1 {
     background: silver;
     bottom: 140px;
     left: 0px;
-    animation: transitar-este-oeste 3s linear 1.5s 1 forwards;  
+    animation: transitar-este-oeste-2 3s linear 1.5s 1 forwards;  
 }
 
 .s2-car3 {
     background: orange;
     bottom: 0;
     right: 190px;
-    animation: transitar-sur-norte 2s linear 1 forwards;
+    animation: transitar-sur-norte-2 2s linear 1 forwards;
 }
 
 .s2-car4 {
     background: black;
     top: 140px;
     right: 0px;
-    animation: transitar-oeste-este 3s ease-in-out 1 forwards;
+    animation: transitar-oeste-este-2 3s ease-in-out 1 forwards;
 }
 
-@keyframes transitar-oeste-este  {
+@keyframes transitar-oeste-este-2  {
     0% {
         right: 0px;
     }
@@ -240,7 +260,7 @@ h1 {
     }
 }
 
-@keyframes transitar-sur-norte  {
+@keyframes transitar-sur-norte-2  {
     0% {
         bottom: 0px;
     }
@@ -249,7 +269,93 @@ h1 {
     }
 }
 
-@keyframes transitar-este-oeste  {
+@keyframes transitar-este-oeste-2  {
+    0% {
+        left: 0px;
+    }
+    30% {
+        left: 130px;
+    }
+    60% {
+        left: 130px;
+    }
+    100% {
+        left: 480px;
+    }
+}
+
+/* Section three */
+
+#section-three {
+    display: none;
+}
+
+.caja1 {
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    border: 1px solid black;
+    width: 22px;
+    height: 100px;
+    bottom: 140px;
+    animation: transitar-este-oeste-3 3s linear 1.5s 1 forwards; 
+}
+
+.s3-car1 {
+    position: relative;
+    background: silver;
+    left: 0px;
+}
+
+.s3-car2 {
+    background: red;
+    top: 0;
+    left: 190px;
+    animation: transitar-sur-norte-3 2s linear 1 forwards;
+}
+
+.s3-car3 {
+    background: orange;
+    bottom: 0;
+    right: 190px;
+    animation: transitar-norte-sur-3 2s linear 1 forwards;
+}
+
+.s3-car4 {
+    background: black;
+    top: 140px;
+    right: 0px;
+    animation: transitar-oeste-este-3 3s ease-in-out 1 forwards;
+}
+
+@keyframes transitar-oeste-este-3  {
+    0% {
+        right: 0px;
+    }
+    100% {
+        right: 100px;
+    }
+}
+
+@keyframes transitar-sur-norte-3  {
+    0% {
+        bottom: 0px;
+    }
+    100% {
+        bottom: 370px;
+    }
+}
+
+@keyframes transitar-norte-sur-3  {
+    0% {
+        bottom: 0px;
+    }
+    100% {
+        bottom: 370px;
+    }
+}
+
+@keyframes transitar-este-oeste-3  {
     0% {
         left: 0px;
     }
